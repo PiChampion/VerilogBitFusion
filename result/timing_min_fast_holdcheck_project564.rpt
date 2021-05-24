@@ -1,0 +1,50 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'project564' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : project564
+Version: P-2019.03-SP1
+Date   : Mon Nov  2 13:07:33 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: fast   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm
+Wire Load Model Mode: top
+
+  Startpoint: write_address_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: write_address_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  write_address_reg[0]/CK (DFF_X2)       0.0000 #   0.0000 r
+  write_address_reg[0]/QN (DFF_X2)       0.0503     0.0503 f
+  U23974/ZN (NAND2_X1)                   0.0219     0.0722 r
+  U23975/ZN (OAI21_X1)                   0.0208     0.0930 f
+  write_address_reg[0]/D (DFF_X2)        0.0000     0.0930 f
+  data arrival time                                 0.0930
+
+  clock clock (rise edge)                0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  write_address_reg[0]/CK (DFF_X2)       0.0000     0.0500 r
+  library hold time                     -0.0004     0.0496
+  data required time                                0.0496
+  -----------------------------------------------------------
+  data required time                                0.0496
+  data arrival time                                -0.0930
+  -----------------------------------------------------------
+  slack (MET)                                       0.0434
+
+
+1

@@ -1,0 +1,6 @@
+area = 25493.174197
+Number of cycles = 	3382 (example 0)
+					19200 (example 1)
+clock period = 5 ns
+performance = 	4.311e8 ns*um2 (example 0)
+				2.447e9 ns*um2 (example 1)

@@ -1,0 +1,83 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'project564' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : project564
+Version: P-2019.03-SP1
+Date   : Mon Nov  2 13:07:23 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+Wire Load Model Mode: top
+
+  Startpoint: mult_input_reg[5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: accumulator_reg[14]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clock (rise edge)                0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  mult_input_reg[5]/CK (DFF_X2)          0.0000 #   0.0000 r
+  mult_input_reg[5]/Q (DFF_X2)           0.6360     0.6360 f
+  U13902/ZN (INV_X2)                     0.0914     0.7273 r
+  U13901/ZN (NAND3_X2)                   0.0664     0.7938 f
+  U12542/ZN (INV_X4)                     0.1204     0.9141 r
+  U13672/ZN (NAND2_X2)                   0.1018     1.0160 f
+  U22177/ZN (INV_X4)                     0.2062     1.2221 r
+  U14027/ZN (NAND2_X1)                   0.0882     1.3103 f
+  U13243/ZN (NAND2_X1)                   0.1521     1.4625 r
+  U13165/ZN (NOR2_X1)                    0.0671     1.5296 f
+  U13095/ZN (NAND3_X1)                   0.2144     1.7440 r
+  U13048/ZN (NOR2_X1)                    0.0806     1.8247 f
+  U11987/ZN (AND3_X4)                    0.2143     2.0389 f
+  U11599/ZN (NAND3_X1)                   0.1421     2.1810 r
+  U12854/ZN (NAND2_X2)                   0.1169     2.2979 f
+  U14076/ZN (INV_X2)                     0.0932     2.3911 r
+  U14186/ZN (NAND2_X1)                   0.0580     2.4491 f
+  U12043/ZN (OAI21_X1)                   0.2676     2.7167 r
+  U12721/ZN (INV_X2)                     0.0991     2.8158 f
+  U22204/ZN (INV_X2)                     0.1036     2.9194 r
+  U22203/ZN (NAND3_X2)                   0.0735     2.9928 f
+  U11950/ZN (NAND2_X2)                   0.0794     3.0722 r
+  U12661/ZN (NAND2_X1)                   0.0724     3.1447 f
+  U13656/ZN (NAND3_X2)                   0.1747     3.3194 r
+  U11951/ZN (INV_X2)                     0.0621     3.3815 f
+  U13679/ZN (NAND2_X2)                   0.0992     3.4808 r
+  U12607/ZN (NAND2_X1)                   0.0789     3.5597 f
+  U22080/ZN (NAND2_X2)                   0.1196     3.6793 r
+  U22079/ZN (NAND2_X2)                   0.0728     3.7521 f
+  U22197/ZN (NOR2_X4)                    0.1222     3.8742 r
+  U22087/ZN (NOR2_X2)                    0.0747     3.9489 f
+  U11992/ZN (NAND2_X4)                   0.1337     4.0826 r
+  U13772/ZN (NAND3_X4)                   0.1271     4.2097 f
+  U13614/ZN (NAND2_X2)                   0.1451     4.3548 r
+  U14141/ZN (NAND4_X2)                   0.0764     4.4312 f
+  U22437/ZN (NAND3_X2)                   0.1478     4.5791 r
+  U11941/ZN (NAND2_X2)                   0.0675     4.6465 f
+  accumulator_reg[14]/D (DFF_X2)         0.0000     4.6465 f
+  data arrival time                                 4.6465
+
+  clock clock (rise edge)                5.0000     5.0000
+  clock network delay (ideal)            0.0000     5.0000
+  clock uncertainty                     -0.0500     4.9500
+  accumulator_reg[14]/CK (DFF_X2)        0.0000     4.9500 r
+  library setup time                    -0.3024     4.6476
+  data required time                                4.6476
+  -----------------------------------------------------------
+  data required time                                4.6476
+  data arrival time                                -4.6465
+  -----------------------------------------------------------
+  slack (MET)                                       0.0011
+
+
+1
